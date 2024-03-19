@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int calcularQuociente(int n1, int n2) {
-    int x = 0;
-    while (n1>=n2) {
-        n1 = n1 - n2;
-        x++;
+    if (n1 < n2) {
+        return 0;
+    } else {
+        return 1 + calcularQuociente(n1 - n2, n2);
     }
-    return x;
 }
 
 

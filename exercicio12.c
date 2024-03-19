@@ -11,8 +11,11 @@ int suc(int n) {
 }
 
 int somaNumero(int n1, int n2) {
-    int soma = n1 + n2;
-    return soma;
+    if (n2 == 0) {
+        return n1;
+    } else {
+        return 1 + somaNumero(n1, n2 - 1);
+    }
 }
 
 int main() {

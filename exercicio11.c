@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int calcularProduto(int n1, int n2){
-    int produto = 0;
-    for (int x = 1; x <= n2; x++) {
-        produto = produto + n1;
+int calcularProduto(int n1, int n2) {
+    if (n2 == 0) {
+        return 0;
+    } else {
+        return n1 + calcularProduto(n1, n2 - 1);
     }
-    return produto;
 }
 
 int main() {

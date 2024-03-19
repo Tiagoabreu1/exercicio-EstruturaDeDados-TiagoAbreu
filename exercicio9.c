@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int calcularRestoDivisao(int n1, int n2) {
-    while (n1 >= n2) {
-        n1 = n1 - n2;
+    if (n1 < n2) {
+        return n1;
+    } else {
+        return calcularRestoDivisao(n1 - n2, n2);
     }
-    return n1;
 }
 
 int main() {
