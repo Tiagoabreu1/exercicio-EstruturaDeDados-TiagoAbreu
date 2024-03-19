@@ -13,7 +13,7 @@ int calcularQuociente(int n1, int n2) {
     if (n1 < n2) {
         return 0;
     } else {
-        return 1 * controle + calcularQuociente(n1 - n2, n2);
+        return (1 * controle) + calcularQuociente(n1 - n2, n2);
     }
 }
 
